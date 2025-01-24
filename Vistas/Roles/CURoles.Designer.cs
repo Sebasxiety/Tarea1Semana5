@@ -32,9 +32,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtRol = new System.Windows.Forms.TextBox();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btn_Salir = new System.Windows.Forms.Button();
             this.btn_Editar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lst_Roles = new System.Windows.Forms.ListBox();
@@ -46,9 +45,8 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.txtRol);
+            this.panel1.Controls.Add(this.txtDetalle);
             this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btn_Salir);
             this.panel1.Controls.Add(this.btn_Editar);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -88,34 +86,26 @@
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtRol
+            // txtDetalle
             // 
-            this.txtRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRol.Location = new System.Drawing.Point(28, 147);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(339, 26);
-            this.txtRol.TabIndex = 19;
+            this.txtDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDetalle.Location = new System.Drawing.Point(28, 147);
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.Size = new System.Drawing.Size(339, 26);
+            this.txtDetalle.TabIndex = 19;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(26, 302);
+            this.btnCancelar.Location = new System.Drawing.Point(138, 293);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 81);
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btn_Salir
-            // 
-            this.btn_Salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Salir.Location = new System.Drawing.Point(246, 302);
-            this.btn_Salir.Name = "btn_Salir";
-            this.btn_Salir.Size = new System.Drawing.Size(106, 81);
-            this.btn_Salir.TabIndex = 18;
-            this.btn_Salir.Text = "Salir";
-            this.btn_Salir.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btn_Editar
             // 
@@ -126,6 +116,7 @@
             this.btn_Editar.TabIndex = 17;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.UseVisualStyleBackColor = true;
+            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
             // 
             // btnEliminar
             // 
@@ -136,6 +127,7 @@
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lst_Roles
             // 
@@ -157,6 +149,7 @@
             this.Controls.Add(this.lst_Roles);
             this.Name = "CURoles";
             this.Size = new System.Drawing.Size(841, 509);
+            this.Load += new System.EventHandler(this.CURoles_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -169,9 +162,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtRol;
+        private System.Windows.Forms.TextBox txtDetalle;
         public System.Windows.Forms.Button btnCancelar;
-        public System.Windows.Forms.Button btn_Salir;
         public System.Windows.Forms.Button btn_Editar;
         public System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.ListBox lst_Roles;
